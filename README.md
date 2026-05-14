@@ -46,7 +46,7 @@ spotify-clone/
 
 ## 🌐 Live Demo
 
-[Click Here to View Live Project](https://your-netlify-link.netlify.app)
+[Click Here to View Live Project]([https://your-netlify-link.netlify.app](https://tunebeats.netlify.app/))
 
 ---
 
