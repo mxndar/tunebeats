@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to TuneBeats</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+        }
+        #top-menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000;
+            padding: 10px 20px;
+            border-radius: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            color: white;
+        }
+        #top-menu .logo {
+            display: flex;
+            align-items: center;
+        }
+        #top-menu .logo img {
+            margin-right: 10px;
+            height: 40px;
+        }
+        #top-menu .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        #top-menu nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        #top-menu nav ul li {
+            margin-left: 20px;
+        }
+        #top-menu nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        #top-menu nav ul li a:hover {
+            color: #f0f0f0;
+        }
+
+        #content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: calc(100vh - 60px);
+            text-align: center;
+        }
+
+        .section-heading {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 2rem;
+            text-align: center;
+            width: 100%;
+        }
+
+        #featured-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+            width: 100%;
+        }
+        .featured-section {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .featured-section h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .featured-section p {
+            font-size: 1rem;
+            color: #4a5568;
+            line-height: 1.75;
+        }
+
+
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header id="top-menu">
+        <div class="logo">
+            <img src="logo.jpg" alt="TuneBeats Logo">
+            <h1>TuneBeats</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Browse</a></li>
+                <li><a href="#">Playlists</a></li>
+                <li><a href="#">Artists</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="content">
+        <h1 class="section-heading">Welcome to TuneBeats</h1>
+        <div id="featured-content">
+            <section class="featured-section">
+                <h2>Featured Playlist</h2>
+                <p>Discover our latest curated playlist, featuring the best new music across all genres.  Perfect for any mood!</p>
+            </section>
+            <section class="featured-section">
+                <h2>New Artist Spotlight</h2>
+                <p>Get to know up-and-coming artists who are making waves in the music industry.  Hear their exclusive tracks and learn their stories.</p>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        // In a real application, you would fetch data from a server.
+        //  This is a simplified example.
+
+        const storedEmail = localStorage.getItem('loggedInEmail');
+        if (!storedEmail) {
+             window.location.href = "login.html";
+        }
+
+    </script>
+</body>
+</html>

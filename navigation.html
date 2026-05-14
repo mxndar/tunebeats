@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuneBeats - Navigation Guide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+            color: #ecf0f1;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between; /* Space out items */
+            align-items: center;
+        }
+        header .home-button {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s ease;
+        }
+        header .home-button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        header .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        header .logo-container img {
+            max-height: 40px;
+            margin-right: 15px;
+        }
+        header .logo-container h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #f39c12;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            line-height: 1.7;
+        }
+        .container h2 {
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            color: #4caf50;
+            font-weight: bold;
+            border-bottom: 2px solid #f39c12;
+            padding-bottom: 10px;
+        }
+        .navigation-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .navigation-item h3 {
+            color: #f39c12;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .navigation-item p {
+            color: #dcdde1;
+            margin-bottom: 10px;
+        }
+        .navigation-item strong {
+            color: #4caf50;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #dcdde1;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+            font-size: 0.9em;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="TuneBeats Logo">
+            <h1>TuneBeats</h1>
+        </div>
+        <a href="home.html" class="home-button"><i class="fas fa-home"></i> Home</a>
+    </header>
+    <div class="container">
+        <h2>Getting Started with TuneBeats</h2>
+
+        <div class="navigation-item">
+            <h3><i class="fas fa-home"></i> Home</h3>
+            <p>
+                The <strong>Home</strong> page is your starting point. Here, you'll find personalized music recommendations, featured playlists, and quick access to recently played tracks.
+            </p>
+        </div>
+
+        <div class="navigation-item">
+            <h3><i class="fas fa-user-astronaut"></i> Artists</h3>
+            <p>
+                Navigate to the <strong>Artists</strong> section to explore your favorite musicians. Browse artists alphabetically or search for specific performers. Clicking on an artist will take you to their profile page with their albums and tracks.
+            </p>
+        </div>
+
+        <div class="navigation-item">
+            <h3><i class="fas fa-blog"></i> Blog</h3>
+            <p>
+                Stay up-to-date with the latest music news, artist interviews, and TuneBeats updates on our <strong>Blog</strong> page.
+            </p>
+        </div>
+
+        <div class="navigation-item">
+            <h3><i class="fas fa-search"></i> Search</h3>
+            <p>
+                Use the <strong>Search</strong> bar (usually located in the header or navigation) to find specific songs, artists, albums, or playlists quickly.
+            </p>
+        </div>
+
+        <div class="navigation-item">
+            <h3><i class="fas fa-list-music"></i> Playlists</h3>
+            <p>
+                Access your created playlists and explore curated playlists by genre or mood in the <strong>Playlists</strong> section. You can create new playlists, add songs, and share them with friends.
+            </p>
+        </div>
+
+        <div class="navigation-item">
+            <h3><i class="fas fa-cog"></i> Settings</h3>
+            <p>
+                Customize your TuneBeats experience in the <strong>Settings</strong> menu. Here you can manage your account, adjust audio quality, set preferences, and find help or support information.
+            </p>
+        </div>
+
+        <div class="navigation-item">
+            <h3><i class="fas fa-info-circle"></i> About</h3>
+            <p>
+                Learn more about the TuneBeats application, our mission, and our team on the <strong>About</strong> page.
+            </p>
+        </div>
+
+        <div class="navigation-item">
+            <h3><i class="fas fa-file-contract"></i> Terms & Conditions</h3>
+            <p>
+                Review our <strong>Terms & Conditions</strong> to understand the rules and guidelines for using the TuneBeats application.
+            </p>
+        </div>
+
+        <div class="navigation-item">
+            <h3><i class="fas fa-sign-out-alt"></i> Logout</h3>
+            <p>
+                To securely exit your TuneBeats account, use the <strong>Logout</strong> option, usually found in the settings or user profile menu.
+            </p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 TuneBeats. All rights reserved.</p>
+    </footer>
+</body>
+</html>

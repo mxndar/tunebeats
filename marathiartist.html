@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Artist - TuneBeats</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background-image: url(backg.png);
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #222;
+            color: white;
+        }
+        header .logo {
+            display: flex;
+            align-items: center; /* Vertically align logo and text */
+        }
+        header .logo img {
+            max-height: 40px; /* Adjust logo size as needed */
+            margin-right: 15px; /* Space between logo and text */
+        }
+        header .logo h1 {
+            font-size: 24px;
+            margin: 0; /* Remove default heading margin */
+        }
+        header div a h3 {
+            color: white; /* Set the color of the Home button text to white */
+            text-decoration: none; /* Remove underline from the link */
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping */
+            justify-content: center; /* Center items horizontally */
+            padding: 20px;
+        }
+
+        .artist-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 20px; /* Adjust margin */
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px; /* Increased padding */
+            width: calc(50% - 40px); /* Two items per row initially */
+            max-width: 400px; /* Increased max width */
+            box-sizing: border-box;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+            text-align: center;
+            position: relative; /* Make sure the container is a positioning context */
+        }
+
+        /* Style for the third item to be centered on the next line */
+        .artist-item:nth-child(3) {
+            width: calc(100% - 40px); /* Full width for the third item */
+            max-width: 400px; /* Maintain max width */
+        }
+
+        .artist-item:hover {
+            transform: scale(1.03);
+            background-color: blanchedalmond;
+        }
+        .artist-item img {
+            width: 100%;
+            height: auto;
+            max-height: 220px; /* Adjust image height */
+            border-radius: 8px 8px 0 0;
+            margin-bottom: 15px; /* Adjust image margin */
+            object-fit: cover;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="TuneBeats Logo">
+            <h1>TuneBeats</h1>
+        </div>
+        <div>
+            <a href="home.html">
+                <h3>Home</h3>
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+    </div>
+
+    <script>
+        const container = document.querySelector('.container');
+
+        const artists = [
+        { name: "Ajay-Atul", image: "ajat.png", description: "मराठी चित्रपट संगीतातील योगदानासाठी आणि त्यांच्या उत्साही बॉलीवूड गाण्यांसाठी प्रसिद्ध." , link: "aj.html"},
+        { name: "Swapnil Bandodkar", image: "swapnil.png", description: "मराठी संगीतातील एक प्रमुख आवाज, विशेषतः त्याच्या रोमँटिक गाण्यांसाठी ओळखला जाणारा.", link: "swapnil.html"},
+    ];
+    artists.forEach(artist => {
+            const artistItem = document.createElement('div');
+            artistItem.className = 'artist-item';
+            artistItem.addEventListener('click', () => {
+                window.location.href = artist.link;
+            });
+
+            const img = document.createElement('img');
+            img.src = artist.image;
+            img.alt = artist.name;
+
+            const artistInfo = document.createElement('div');
+            artistInfo.className = 'candidate-info';
+
+            const artistName = document.createElement('h2');
+            artistName.className = 'candidate-info';
+            artistName.textContent = artist.name;
+
+            const artistDescription = document.createElement('p');
+            artistDescription.className = 'candidate-info';
+            artistDescription.textContent = artist.description;
+
+            artistInfo.appendChild(artistName);
+            artistInfo.appendChild(artistDescription);
+
+            artistItem.appendChild(img);
+            artistItem.appendChild(artistInfo);
+
+            container.appendChild(artistItem);
+        });
+    </script>
+</body>
+</html>

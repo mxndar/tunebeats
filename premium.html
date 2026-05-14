@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuneBeats Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+        }
+        #top-menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000;
+            padding: 10px 20px;
+            border-radius: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            color: white;
+        }
+        #top-menu .logo {
+            display: flex;
+            align-items: center;
+        }
+        #top-menu .logo img {
+            margin-right: 10px;
+            height: 40px;
+        }
+        #top-menu .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        #top-menu nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            flex-direction: row;
+            align-items: center;
+        }
+        #top-menu nav ul li {
+            margin-left: 20px;
+            margin-top: 0;
+        }
+        #top-menu nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: block;
+            padding: 5px 0;
+        }
+        #top-menu nav ul li a:hover {
+            color: #f0f0f0;
+        }
+        #content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: calc(100vh - 60px);
+            text-align: center;
+        }
+
+        .section-heading {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 2rem;
+            text-align: center;
+            width: 100%;
+        }
+
+        #premium-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+            width: 100%;
+        }
+
+        .premium-section {
+            background-color: #fff;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+
+        .premium-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .premium-section h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+        }
+
+        .premium-section p {
+            font-size: 1.1rem;
+            color: #4a5568;
+            line-height: 1.75;
+            margin-bottom: 2rem;
+        }
+
+        .premium-section ul {
+            list-style-position: inside;
+            list-style-type: disc;
+            font-size: 1.1rem;
+            color: #4a5568;
+            margin-bottom: 2rem;
+        }
+
+        .premium-section li {
+            margin-bottom: 1rem;
+        }
+
+
+        .upgrade-button {
+            background-color: #ff7800;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out, transform 0.1s ease;
+            display: inline-block;
+            align-self: center;
+        }
+
+        .upgrade-button:hover {
+            background-color: #e56200;
+            transform: scale(1.05);
+        }
+
+
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header id="top-menu">
+        <div class="logo">
+            <img src="logo.png" alt="TuneBeats Logo">
+            <h1>TuneBeats</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="signin.html">logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="content">
+        <h1 class="section-heading">Get TuneBeats Premium</h1>
+        <div id="premium-content">
+            <section class="premium-section">
+                <h2>Enjoy Unlimited Music</h2>
+                <p>Upgrade to TuneBeats Premium and experience music like never before.</p>
+                <ul>
+                    <li><strong>Unlimited, ad-free listening:</strong> Immerse yourself in your favorite tunes without interruptions.</li>
+                    <li><strong>Offline downloads:</strong> Download songs, albums, and playlists to listen anywhere, even without an internet connection.</li>
+                    <li><strong>High-quality audio:</strong> Enjoy crystal-clear sound with our high-fidelity audio option.</li>
+                    <li><strong>Early access to new releases:</strong> Be the first to hear the latest tracks from your favorite artists.</li>
+                    <li><strong>Personalized recommendations:</strong> Get tailored music suggestions based on your listening history.</li>
+                </ul>
+                <a href="home.html" class="upgrade-button">Upgrade to Premium</a>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        // In a real application, you would fetch data from a server.
+        //  This is a simplified example.
+
+        const storedEmail = localStorage.getItem('loggedInEmail');
+        if (!storedEmail) {
+            window.location.href = "login.html";
+        }
+
+        const logoutLink = document.getElementById('logout-link');
+        if (logoutLink) {
+            logoutLink.addEventListener('click', () => {
+                localStorage.removeItem('loggedInEmail');
+                window.location.href = 'home.html';
+            });
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Language - TuneBeats</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url(bag.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            color: white;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #333;
+        }
+        header .logo {
+            display: flex;
+            align-items: center; /* Vertically align logo and text */
+        }
+        header .logo img {
+            max-height: 40px; /* Adjust logo size as needed */
+            margin-right: 15px; /* Space between logo and text */
+        }
+        header .logo h1 {
+            font-size: 28px;
+            margin: 0; /* Remove default heading margin */
+        }
+        header div a h3 {
+            color: white; /* Set the color of the Home button text to white */
+            text-decoration: none; /* Remove underline from the link */
+        }
+        .language-container {
+            display: flex;
+            flex-direction: column; /* Arrange items in a column */
+            align-items: center; /* Center items horizontally */
+            padding: 20px;
+            max-width: 600px; /* Adjust maximum width as needed */
+            width: 90%;
+        }
+        .language-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            padding: 25px;
+            margin: 20px 0; /* Add vertical margin for spacing */
+            width: 100%; /* Make each item take full width */
+            max-width: 400px; /* Limit the maximum width of each box */
+            box-sizing: border-box;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+        .language-item:hover {
+            transform: scale(1.03);
+            background-color: #e0e0e0;
+        }
+        .language-item h2 {
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.5em; /* Larger font size for language text */
+        }
+        .language-item a {
+            text-decoration: none; /* Remove underline from language links */
+        }
+        .language-item a h2 {
+            color: inherit; /* Inherit the color from the parent (black in this case) */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="TuneBeats Logo">
+            <h1>TuneBeats</h1>
+        </div>
+        <div>
+            <a href="home.html" >
+                <h3>Home</h3>
+            </a>
+        </div>
+    </header>
+
+    <div class="language-container">
+        <div class="language-item" onclick="selectLanguage('English')">
+           <a href="englishartist.html"> <h2>English</h2></a>
+        </div>
+        <div class="language-item" onclick="selectLanguage('Hindi')" >
+            <a href="hindiartist.html"><h2>हिन्दी(Hindi)</h2></a>
+        </div>
+        <div class="language-item" onclick="selectLanguage('Marathi')">
+            <a href="marathiartist.html"><h2>मराठी(Marathi)</h2></div><a>
+        </div>
+        <div class="language-item" onclick="selectLanguage('Tamil')">
+            <a href="tamilartist.html"> <h2>தமிழ்(Tamil)</h2></a>
+    </div>
+    <div class="language-item" onclick="selectLanguage('Tamil')">
+        <a href="punjabiartist.html"> <h2>ਪੰਜਾਬੀ(Punjabi)</h2></a>
+</div>
+</body>
+</html>

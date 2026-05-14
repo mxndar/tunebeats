@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Glowing Universe</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(270deg, #013026, #014760, #430d4b, #013026);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .beat-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+        }
+
+        .beat {
+            width: 20%;
+            height: 100px;
+            opacity: 0.7;
+            animation: beat-animation 1s ease-in-out infinite;
+        }
+
+        .beat:nth-child(1) { background: #062c43; animation-delay: 0s; }
+        .beat:nth-child(2) { background: #282157; animation-delay: 0.2s; }
+        .beat:nth-child(3) { background: #c2dde4; animation-delay: 0.4s; }
+        .beat:nth-child(4) { background: #014760; animation-delay: 0.6s; }
+        .beat:nth-child(5) { background: #210535; animation-delay: 0.8s; }
+
+        @keyframes beat-animation {
+            0%, 100% { transform: scaleY(1); }
+            50% { transform: scaleY(1.5); }
+        }
+
+        .navbar {
+            position: absolute;
+            top: 40px; /* Adjusted top position */
+            right: 20px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 20px; /* Adjusted top position */
+            left: 20px;
+            display: flex;
+            align-items: center;
+            z-index: 10;
+            text-decoration: none; /* Make the logo container a link */
+        }
+
+        .logo {
+            max-height: 60px; /* Adjust logo size as needed */
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-size: 2em;
+            font-weight: bold;
+            color: white; /* Set the color of TuneBeats to white */
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+            margin: 0;
+            align-self: center;
+            z-index: 10;
+        }
+
+        .content {
+            margin-top: 100px;
+            padding: 0 20px;
+            max-width: 800px;
+            z-index: 10;
+        }
+
+        p {
+            font-size: 1.7em;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            text-align: center;
+        }
+
+        .start-listening {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            background-color: lightgrey;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            transition: background-color 0.3s;
+            text-decoration: none; /* To remove underline from the link */
+        }
+
+        .start-listening:hover {
+            background-color: white;
+            color: #222; /* Change text color on hover for better visibility */
+        }
+
+        footer {
+            position: relative;
+            padding: 20px 0;
+            width: 100%;
+            text-align: center;
+            font-size: 1em;
+            color: white;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            margin-top: auto;
+            background: none;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="about.html">ABOUT</a>
+        <a href="blog.html">BLOG</a>
+        <a href="terms.html">TERMS & CONDITIONS</a>
+    </div>
+
+    <a href="home.html" class="logo-container">
+        <img src="logo.png" alt="TuneBeats Logo" class="logo">
+        <h1 class="logo-text">TuneBeats</h1>
+    </a>
+
+    <div class="beat-container">
+        <div class="beat"></div>
+        <div class="beat"></div>
+        <div class="beat"></div>
+        <div class="beat"></div>
+        <div class="beat"></div>
+    </div>
+
+    <div class="content">
+        <h2>Welcome to the Glowing Universe</h2>
+        <p>Explore the wonders of the cosmos, where stars twinkle and galaxies swirl. The universe is circular, with endless movement as everything dances together, harmonizing in the vast expanse. Join us as we embark on a journey across the stars, discovering the beauty of our ever-expanding universe.</p>
+        <a href="signin.html" class="start-listening">Start Listening</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Tune Beats | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

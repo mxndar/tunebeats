@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to TuneBeats</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            background-image: url(backg2.png);
+            background-size: cover;
+            background-position: center
+            background-repeat:no-repeat;
+        }
+        #top-menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000;
+            padding: 10px 20px;
+            border-radius: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            color: white;
+            
+        }
+        #top-menu .logo {
+            display: flex;
+            align-items: center;
+        }
+        #top-menu .logo img {
+            margin-right: 10px;
+            height: 40px;
+        }
+        #top-menu .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        #top-menu nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        #top-menu nav ul li {
+            margin-left: 20px;
+        }
+        #top-menu nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        #top-menu nav ul li a:hover {
+            color: #f0f0f0;
+        }
+
+        #content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: calc(100vh - 60px);
+            text-align: center;
+        }
+
+        .section-heading {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: antiquewhite;
+            margin-bottom: 2rem;
+            text-align: center;
+            width: 100%;
+        }
+
+        #featured-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+            width: 100%;
+        }
+        .featured-section {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            position: relative; /* To position the arrow */
+            display: flex; /* For aligning text and arrow */
+            flex-direction: column;
+        }
+
+        .featured-section h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 1rem;
+
+        }
+        .featured-section p {
+            font-size: 1rem;
+            color: #4a5568;
+            line-height: 1.75;
+            margin-bottom: 1.5rem; /* Add some space for the arrow */
+        }
+
+        .view-more-arrow {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            color: #4a5568;
+            font-size: 1.5rem;
+            cursor: pointer; /* Indicate it's clickable */
+        }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header id="top-menu">
+        <div class="logo">
+            <img src="logo.png" alt="TuneBeats Logo">
+            <h1>TuneBeats</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="navigation.html">Guide</a></li>
+                <li><a href="language.html">Language</a></li>
+                <li><a href="logout.html">logout</a></li>
+                <li><a href="premium.html">premium</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="content">
+        <h1 class="section-heading">Welcome to TuneBeats</h1>
+        <div id="featured-content"><a href="language.html">
+            <section class="featured-section">
+                <h2>Featured Playlist</h2>
+                <p>Discover our latest curated playlist, featuring the best new music across all genres. Perfect for any mood!</p>
+                <i class="fas fa-arrow-right view-more-arrow" ></i>
+            </section></a>
+    </main>
+
+    <script>
+        // In a real application, you would fetch data from a server.
+        //  This is a simplified example.
+
+        const storedEmail = localStorage.getItem('loggedInEmail');
+        if (!storedEmail) {
+            window.location.href = "login.html";
+        }
+
+        // You would add JavaScript here to handle the click on the arrow
+        const playlistArrow = document.querySelector('.view-more-arrow');
+        if (playlistArrow) {
+            playlistArrow.addEventListener('click', () => {
+                // In a real app, this would navigate to the playlist page
+                console.log('Navigate to Playlist Page');
+                // window.location.href = "playlist.html";
+            });
+        }
+
+    </script>
+</body>
+</html>
